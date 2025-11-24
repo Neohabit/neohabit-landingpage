@@ -1,0 +1,202 @@
+:root {
+    --primary-color: #2563eb;
+    /* Azul moderno */
+    --secondary-color: #64748b;
+    --accent-color: #0ea5e9;
+    --success-color: #22c55e;
+    --dark-bg: #0f172a;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #334155;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar-brand {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary-color) !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: #475569;
+}
+
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    min-height: 85vh;
+    background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(37, 99, 235, 0.8) 100%),
+        url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 1.35rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    color: #e2e8f0;
+}
+
+/* Features Section */
+.section-title {
+    margin-bottom: 4rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-bg);
+}
+
+.feature-card {
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: white;
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.feature-card ul {
+    text-align: left;
+}
+
+.feature-card li {
+    align-items: flex-start;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent-color);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: #eff6ff;
+    color: var(--primary-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 1.5rem;
+}
+
+/* Role Based Section */
+#solucoes {
+    background-color: #f8fafc;
+    padding: 6rem 0;
+}
+
+.role-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.bg-resident {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.bg-manager {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.bg-investor {
+    background-color: #fae8ff;
+    color: #86198f;
+}
+
+/* Investor/Stats Section */
+#investidores {
+    background-color: var(--dark-bg);
+    color: white;
+    padding: 5rem 0;
+}
+
+.stat-item h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+/* Contact Section */
+.contact-card {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    #hero {
+        min-height: auto;
+        padding: 6rem 0 4rem 0;
+    }
+}
