@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  landingpage:
+    build: .
+    container_name: neohabit-landingpage
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    networks:
+      - neohabit-network
+
+networks:
+  neohabit-network:
+    external: true
+
