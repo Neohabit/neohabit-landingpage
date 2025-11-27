@@ -6,9 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnLoader = document.getElementById('btnLoader');
     const alertSuccess = document.getElementById('alertSuccess');
     const alertError = document.getElementById('alertError');
-    // const API_URL = 'https://api.neohabit.com.br/contact/landing-page';
-
-    const API_URL = 'http://localhost:8080/contact/landing-page';
+    const API_URL = 'https://devapi.neohabit.com.br/contact/landing-page';
     
 
     const sendContactForm = async (data) => {
