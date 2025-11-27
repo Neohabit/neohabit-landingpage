@@ -1,0 +1,92 @@
+---
+alwaysApply: true
+---
+
+# Project Rules - API-V2
+
+## Project Owner
+- **Owner**: cgisoftware
+
+## Pull Request Workflow
+
+### PR Creation Rules
+1. **Template**: Always follow the template at `.github/PULL_REQUEST_TEMPLATE.md`
+2. **Target Branch**: All PRs must target the `develop` branch
+3. **Diff Comparison**: Always compare the full diff between current branch and `develop` to generate documentation
+4. **Review Before Creation**: Show the PR markdown content for review BEFORE creating the pull request
+
+### PR Title Format
+Format: `:icon: type(scope): title`
+
+**Structure**:
+- `:icon:` - Use Gitmoji emoji
+- `type` - One of: `feat`, `refactor`, `bug`, `hotfix`
+- `scope` - Request/task ID (e.g., `112333/23`)
+- `title` - Descriptive title in Portuguese
+
+**Example**: `:sparkles: feat(112333/23): implementa autenticação de usuários`
+
+## Commit Workflow
+
+### Commit Generation Rules
+When generating commits:
+1. **Check Source Control**: Review all changes in source control across the entire project
+2. **Separate Commits**: Create organized, separate commits per logical change
+3. **Include Add Commands**: Generate `git add` commands for each commit
+
+### Commit Message Format
+Format: `:icon: type(file/scope): message`
+
+**Structure**:
+- `:icon:` - Use Gitmoji emoji
+- `type` - Use Conventional Commits (e.g., `feat`, `refactor`, `fix`, `docs`, `style`, `test`, `chore`)
+- `file/scope` - File name and scope of change
+- `message` - Single sentence in Portuguese, present tense, detailed
+
+**Example**: `:recycle: refactor(user.service.go): extrai lógica de validação para função separada`
+
+## Branch Management
+
+### Branch Naming Convention
+**Prefixes**:
+- `feature/` - New features
+- `bugfix/` - Bug fixes
+- `hotfix/` - Urgent production fixes
+
+**Format**: `prefix/descriptive-name`
+
+**Example**: `feature/autenticacao-usuarios`
+
+### Branch Creation Workflow
+When creating a new branch:
+1. Checkout to `develop` branch
+2. Update `develop` branch (pull latest changes)
+3. Create new branch from updated `develop`
+
+**Commands**:
+```bash
+git checkout develop
+git pull origin develop
+git checkout -b feature/nome-da-branch
+```
+
+## Summary Checklist
+
+### Pull Requests
+- [ ] Follow `.github/PULL_REQUEST_TEMPLATE.md`
+- [ ] Target `develop` branch
+- [ ] Use correct title format with Gitmoji
+- [ ] Show markdown content before creating
+- [ ] Compare full diff against `develop`
+
+### Commits
+- [ ] Review all source control changes
+- [ ] Create separate, organized commits
+- [ ] Use Gitmoji + Conventional Commits format
+- [ ] Write in Portuguese, present tense
+- [ ] Include `git add` commands
+
+### Branches
+- [ ] Use correct prefix (`feature/`, `bugfix/`, `hotfix/`)
+- [ ] Checkout and update `develop` first
+- [ ] Create branch from updated `develop`
